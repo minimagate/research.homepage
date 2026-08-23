@@ -1,0 +1,9 @@
+<header class="site-header">
+  {% set header_image = config.extra.header_image | default(value="") %}
+  {% if header_image %}
+  <div class="site-banner" aria-hidden="true">
+    <img src="{{ get_url(path=header_image, trailing_slash=false) }}" alt="">
+  </div>
+  {% endif %}
+  {% include "partials/nav.html" %}
+</header>

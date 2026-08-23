@@ -2,30 +2,6 @@
 
 /* Research-site components ------------------------------------------------ */
 
-.nav-shell {
-  aspect-ratio: 736 / 232;
-  padding: .375rem .5rem;
-  overflow: hidden;
-  background-color: #8a8b87;
-  background-image: url("../images/research-header.avif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.site-nav { justify-content: flex-end; }
-
-.nav-items { justify-content: flex-end; }
-
-.nav-items a,
-.nav-items a:visited,
-.nav-items a:hover,
-.nav-items a:active {
-  color: #fff;
-  text-decoration: none;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 70%);
-}
-
 .sr-only {
   position: absolute;
   width: 1px;

@@ -11,4 +11,5 @@ ignored_static = ["styles/foundation/.git", "styles/foundation/.agents", "styles
 smart_punctuation = true
 
 [extra]
+header_image = "images/research-header.avif"
 repository = "https://github.com/minimagate/geometry-of-meaning"

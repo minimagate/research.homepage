@@ -2,7 +2,7 @@
 
 A minimal [Zola](https://www.getzola.org/) archive for the Geometry of Meaning research project.
 
-The primary navigation is overlaid on an optimized 736×232 AVIF crop at `static/images/research-header.avif`, taken from the upper portion of the source image.
+An optimized 736×232 AVIF crop at `static/images/research-header.avif`, taken from the upper portion of the source image, appears above the shared primary navigation.
 
 The archive summarises the research without duplicating its source of truth: every experiment,
 dataset, run, and notebook page links to the corresponding file in the
