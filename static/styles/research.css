@@ -2,6 +2,34 @@
 
 /* Research-site components ------------------------------------------------ */
 
+.research-section-icon {
+  background-color: currentColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.section-icon--experiments {
+  -webkit-mask-image: url("../images/project-icons/database.png");
+  mask-image: url("../images/project-icons/database.png");
+}
+
+.section-icon--observations {
+  -webkit-mask-image: url("../images/project-icons/research-experiences.png");
+  mask-image: url("../images/project-icons/research-experiences.png");
+}
+
+.section-icon--data {
+  -webkit-mask-image: url("../images/project-icons/open-folder.png");
+  mask-image: url("../images/project-icons/open-folder.png");
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
