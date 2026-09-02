@@ -13,10 +13,12 @@ SITE_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_RESEARCH_ROOT = SITE_ROOT.parent / "geometry-of-meaning"
 MANIFEST_DIR = SITE_ROOT / "data" / "observation-charts"
 CHART_DIR = SITE_ROOT / "static" / "charts"
-GRAYSCALE_STYLE = """<style id="gom-grayscale">
-/* Publication charts use luminance and line/marker encodings, never hue. */
+PUBLICATION_STYLE = """<style id="gom-publication-style">
+/* Match the warm editorial page without muting the chart's restrained palette. */
+html,
 body {
-  filter: grayscale(100%);
+  margin: 0;
+  background: #f6f6ef;
 }
 </style>"""
 HEIGHT_BRIDGE = """<script>
@@ -99,12 +101,12 @@ def sync_manifest(path: Path, research_root: Path, seen_outputs: set[str]) -> li
 
         if "</body>" not in html.lower():
             raise ValueError(f"chart HTML has no closing body element: {source}")
-        if "id=\"gom-grayscale\"" in html:
-            raise ValueError(f"chart already contains the grayscale publication style: {source}")
+        if "id=\"gom-publication-style\"" in html:
+            raise ValueError(f"chart already contains the publication style: {source}")
         closing_head = html.lower().rfind("</head>")
         if closing_head == -1:
             raise ValueError(f"chart HTML has no closing head element: {source}")
-        html = html[:closing_head] + GRAYSCALE_STYLE + html[closing_head:]
+        html = html[:closing_head] + PUBLICATION_STYLE + html[closing_head:]
         closing_body = html.lower().rfind("</body>")
         html = html[:closing_body] + HEIGHT_BRIDGE + html[closing_body:]
 
